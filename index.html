@@ -1059,7 +1059,11 @@ footer .footer-bottom {
 }
 .checker-step { display: none; }
 .checker-step.active { display: block; }
-.checker-animal-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 1.5rem 0; }
+.checker-animal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 10px;
+; gap: 12px; margin: 1.5rem 0; }
 .checker-animal-btn {
   border: 2px solid var(--sand-mid); border-radius: var(--radius-sm);
   padding: 1rem 0.5rem; text-align: center; cursor: pointer;
