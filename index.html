@@ -955,6 +955,141 @@ footer .footer-bottom {
 }
 .toast.show { transform: translateX(-50%) translateY(0); }
 
+/* ======= AUTH MODAL ======= */
+.auth-overlay {
+  position: fixed; inset: 0;
+  background: rgba(13,27,51,0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 3100; display: none;
+  align-items: center; justify-content: center;
+  padding: 1rem;
+}
+.auth-overlay.open { display: flex; }
+.auth-box {
+  background: var(--warm-white); border-radius: 24px;
+  padding: 2.5rem 2rem 2rem; width: 100%; max-width: 420px;
+  box-shadow: var(--shadow-lg); position: relative;
+  animation: slideUp 0.35s cubic-bezier(0.34,1.56,0.64,1);
+}
+.auth-tabs { display: flex; gap: 0; margin-bottom: 2rem; border-radius: 12px; overflow: hidden; border: 1.5px solid var(--sand-mid); }
+.auth-tab {
+  flex: 1; padding: 10px; text-align: center; font-size: 14px; font-weight: 700;
+  cursor: pointer; background: var(--cream); color: var(--text-soft); border: none;
+  font-family: 'Onest', sans-serif; transition: all 0.2s;
+}
+.auth-tab.active { background: var(--forest); color: #fff; }
+.auth-panel { display: none; }
+.auth-panel.active { display: block; }
+.auth-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--forest-light); margin-bottom: 6px; }
+.auth-title { font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 800; color: var(--text-dark); margin-bottom: 1.5rem; letter-spacing: -0.03em; }
+.auth-close {
+  position: absolute; top: 1rem; right: 1rem;
+  background: var(--forest); border: none; border-radius: 50%;
+  width: 36px; height: 36px; cursor: pointer;
+  font-size: 16px; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.auth-close:hover { background: var(--forest-mid); }
+.nav-account-btn {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--forest-faint); border: 1.5px solid var(--forest-pale);
+  color: var(--forest); border-radius: 10px; padding: 7px 14px;
+  font-size: 13px; font-weight: 700; cursor: pointer;
+  font-family: 'Onest', sans-serif; transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-account-btn:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+/* ======= ЛИЧНЫЙ КАБИНЕТ ======= */
+.cabinet-hero { background: var(--cream); padding: 60px 2.5rem 40px; border-bottom: 1px solid var(--sand); }
+.cabinet-user-bar {
+  display: flex; align-items: center; gap: 16px; margin-bottom: 2rem;
+  background: var(--warm-white); border: 1px solid var(--sand); border-radius: var(--radius);
+  padding: 1.5rem;
+}
+.cabinet-avatar { width: 60px; height: 60px; border-radius: 50%; background: var(--forest); display: flex; align-items: center; justify-content: center; font-size: 28px; flex-shrink: 0; }
+.cabinet-user-info h3 { font-size: 18px; font-weight: 800; color: var(--text-dark); }
+.cabinet-user-info p { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+.cabinet-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 2rem 0 1.5rem; }
+.cabinet-tab {
+  padding: 9px 18px; border-radius: 50px; font-size: 13px; font-weight: 700;
+  cursor: pointer; border: 1.5px solid var(--sand-mid); background: var(--cream);
+  color: var(--text-soft); font-family: 'Onest', sans-serif; transition: all 0.2s;
+}
+.cabinet-tab.active { background: var(--forest); color: #fff; border-color: var(--forest); }
+.cabinet-panel { display: none; }
+.cabinet-panel.active { display: block; }
+.pet-card {
+  background: var(--warm-white); border: 1px solid var(--sand); border-radius: var(--radius);
+  padding: 1.5rem; margin-bottom: 1.2rem; display: flex; gap: 1rem; align-items: flex-start;
+}
+.pet-avatar { font-size: 48px; flex-shrink: 0; }
+.pet-info { flex: 1; }
+.pet-name { font-size: 20px; font-weight: 800; color: var(--text-dark); margin-bottom: 4px; }
+.pet-meta { font-size: 13px; color: var(--text-soft); margin-bottom: 10px; }
+.pet-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.pet-tag { background: var(--forest-faint); color: var(--forest); border-radius: 50px; padding: 4px 12px; font-size: 12px; font-weight: 700; }
+.pet-tag.warn { background: #FFF3CD; color: #856404; }
+.add-pet-btn {
+  width: 100%; padding: 14px; border: 2px dashed var(--sand-mid); border-radius: var(--radius);
+  background: transparent; color: var(--text-muted); font-size: 14px; font-weight: 600;
+  cursor: pointer; font-family: 'Onest', sans-serif; transition: all 0.2s;
+}
+.add-pet-btn:hover { border-color: var(--forest); color: var(--forest); background: var(--forest-faint); }
+.visit-row { display: flex; gap: 12px; align-items: flex-start; padding: 1rem 0; border-bottom: 1px solid var(--sand); }
+.visit-date { font-size: 12px; color: var(--text-muted); min-width: 90px; padding-top: 2px; }
+.visit-details h4 { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 2px; }
+.visit-details p { font-size: 13px; color: var(--text-soft); }
+.vaccine-row { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--cream); border-radius: var(--radius-sm); border: 1px solid var(--sand); margin-bottom: 8px; }
+.vaccine-name { font-size: 14px; font-weight: 700; color: var(--text-dark); }
+.vaccine-date { font-size: 12px; color: var(--text-soft); margin-top: 2px; }
+.vaccine-status { font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 50px; }
+.vaccine-status.ok { background: #D1FAE5; color: #065F46; }
+.vaccine-status.soon { background: #FEF3C7; color: #92400E; }
+.vaccine-status.overdue { background: #FEE2E2; color: #991B1B; }
+
+/* ======= СИМПТОМ-ЧЕКЕР ======= */
+.checker-section { background: var(--cream); padding: 90px 2.5rem; }
+.checker-box {
+  background: var(--warm-white); border: 1px solid var(--sand); border-radius: var(--radius);
+  padding: 2.5rem; max-width: 780px; margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+.checker-step { display: none; }
+.checker-step.active { display: block; }
+.checker-animal-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 1.5rem 0; }
+.checker-animal-btn {
+  border: 2px solid var(--sand-mid); border-radius: var(--radius-sm);
+  padding: 1rem 0.5rem; text-align: center; cursor: pointer;
+  background: var(--cream); transition: all 0.2s; font-family: 'Onest', sans-serif;
+}
+.checker-animal-btn:hover, .checker-animal-btn.sel { border-color: var(--forest); background: var(--forest-faint); }
+.checker-animal-btn .emoji { font-size: 32px; display: block; margin-bottom: 4px; }
+.checker-animal-btn span { font-size: 12px; font-weight: 700; color: var(--text-mid); }
+.symptom-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 1.2rem 0; }
+.symptom-chip {
+  border: 1.5px solid var(--sand-mid); border-radius: 50px;
+  padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer;
+  background: var(--cream); color: var(--text-soft); font-family: 'Onest', sans-serif;
+  transition: all 0.2s;
+}
+.symptom-chip.sel { background: var(--forest); color: #fff; border-color: var(--forest); }
+.checker-result {
+  border-radius: var(--radius-sm); padding: 1.5rem; margin-top: 1.5rem;
+}
+.checker-result.urgent { background: #FEE2E2; border: 1.5px solid #FECACA; }
+.checker-result.medium { background: #FEF3C7; border: 1.5px solid #FDE68A; }
+.checker-result.low { background: #D1FAE5; border: 1.5px solid #A7F3D0; }
+.checker-result-title { font-size: 18px; font-weight: 800; margin-bottom: 0.5rem; }
+.checker-result.urgent .checker-result-title { color: #991B1B; }
+.checker-result.medium .checker-result-title { color: #92400E; }
+.checker-result.low .checker-result-title { color: #065F46; }
+.checker-result p { font-size: 14px; line-height: 1.7; }
+.checker-nav { display: flex; gap: 10px; margin-top: 1.5rem; }
+.checker-back { background: var(--cream); border: 1.5px solid var(--sand-mid); color: var(--text-soft); padding: 11px 20px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Onest', sans-serif; }
+
 /* ======= ANIMATIONS ======= */
 @keyframes fadeSlideUp {
   from { opacity: 0; transform: translateY(20px); }
@@ -1027,12 +1162,14 @@ footer .footer-bottom {
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#" onclick="showPage('home')" class="active" id="nav-home">Главная</a>
+      <a href="#" onclick="showPage('checker')" id="nav-checker">🔍 Симптомы</a>
       <a href="#" onclick="showPage('team')" id="nav-team">Специалисты</a>
       <a href="#" onclick="showPage('price')" id="nav-price">Прайс-лист</a>
       <a href="#" onclick="showPage('promos')" id="nav-promos">Акции</a>
       <a href="#" onclick="showPage('reviews')" id="nav-reviews">Отзывы</a>
       <a href="#" onclick="showPage('contacts')" id="nav-contacts">Контакты</a>
       <a href="#" class="nav-cta" onclick="openModal()">Записаться на приём</a>
+      <button class="nav-account-btn" id="navAccountBtn" onclick="handleAccountClick()">👤 <span id="navAccountLabel">Войти</span></button>
     </div>
     <div class="nav-social">
       <a href="https://vk.com/vetklinikadrug_krd" target="_blank" rel="noopener" title="ВКонтакте">
@@ -1907,6 +2044,184 @@ footer .footer-bottom {
   </section>
 </div>
 
+<!-- ===== СИМПТОМ-ЧЕКЕР PAGE ===== -->
+<div class="page" id="page-checker">
+  <div class="price-hero">
+    <div class="section-inner">
+      <div class="section-label">Интеллектуальный помощник</div>
+      <h2 class="section-title">🔍 Симптом-чекер</h2>
+      <p class="section-sub">Опишите симптомы питомца — система оценит серьёзность ситуации и предложит дальнейшие действия.</p>
+    </div>
+  </div>
+  <section class="checker-section">
+    <div class="section-inner">
+      <div class="checker-box">
+        <!-- ШАГ 1: выбор животного -->
+        <div class="checker-step active" id="checker-step-1">
+          <div class="section-label">Шаг 1 из 3</div>
+          <div class="section-title" style="font-size:22px;margin-bottom:0.5rem;">Кто ваш питомец?</div>
+          <div class="checker-animal-grid">
+            <div class="checker-animal-btn" onclick="selectAnimal('Собака',this)"><em class="emoji">🐕</em><span>Собака</span></div>
+            <div class="checker-animal-btn" onclick="selectAnimal('Кошка',this)"><em class="emoji">🐈</em><span>Кошка</span></div>
+            <div class="checker-animal-btn" onclick="selectAnimal('Птица',this)"><em class="emoji">🦜</em><span>Птица</span></div>
+            <div class="checker-animal-btn" onclick="selectAnimal('Грызун',this)"><em class="emoji">🐀</em><span>Грызун</span></div>
+          </div>
+          <div class="checker-nav">
+            <button class="btn-primary" onclick="checkerNext(2)" id="checkerBtn1" disabled style="opacity:0.4;">Далее →</button>
+          </div>
+        </div>
+        <!-- ШАГ 2: симптомы -->
+        <div class="checker-step" id="checker-step-2">
+          <div class="section-label">Шаг 2 из 3</div>
+          <div class="section-title" style="font-size:22px;margin-bottom:0.5rem;">Какие симптомы вы заметили?</div>
+          <p style="color:var(--text-soft);font-size:14px;margin-bottom:0.5rem;">Выберите один или несколько:</p>
+          <div class="symptom-grid" id="symptomGrid"></div>
+          <div class="checker-nav">
+            <button class="checker-back" onclick="checkerNext(1)">← Назад</button>
+            <button class="btn-primary" onclick="checkerNext(3)" id="checkerBtn2" disabled style="opacity:0.4;">Оценить →</button>
+          </div>
+        </div>
+        <!-- ШАГ 3: результат -->
+        <div class="checker-step" id="checker-step-3">
+          <div class="section-label">Шаг 3 из 3</div>
+          <div class="section-title" style="font-size:22px;margin-bottom:0.5rem;">Результат оценки</div>
+          <div id="checkerResult"></div>
+          <div class="checker-nav" style="margin-top:1.5rem;">
+            <button class="checker-back" onclick="checkerNext(1)">🔄 Начать заново</button>
+            <button class="btn-primary" onclick="openModal()">📅 Записаться к врачу</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== ЛИЧНЫЙ КАБИНЕТ PAGE ===== -->
+<div class="page" id="page-cabinet">
+  <div class="cabinet-hero">
+    <div class="section-inner">
+      <div class="section-label">Личный кабинет</div>
+      <h2 class="section-title" id="cabinetTitle">Мой кабинет</h2>
+    </div>
+  </div>
+  <section class="section" style="background:var(--warm-white);">
+    <div class="section-inner">
+      <div class="cabinet-user-bar">
+        <div class="cabinet-avatar" id="cabinetAvatar">👤</div>
+        <div class="cabinet-user-info">
+          <h3 id="cabinetUserName">Пользователь</h3>
+          <p id="cabinetUserEmail">email@example.com</p>
+        </div>
+        <div style="margin-left:auto;">
+          <button class="btn-outline" style="font-size:13px;padding:8px 16px;" onclick="logoutUser()">Выйти</button>
+        </div>
+      </div>
+
+      <div class="cabinet-tabs">
+        <button class="cabinet-tab active" onclick="showCabinetTab('pets',this)">🐾 Мои питомцы</button>
+        <button class="cabinet-tab" onclick="showCabinetTab('visits',this)">📋 История визитов</button>
+        <button class="cabinet-tab" onclick="showCabinetTab('vaccines',this)">💉 Прививки</button>
+      </div>
+
+      <!-- ПИТОМЦЫ -->
+      <div class="cabinet-panel active" id="cab-pets">
+        <div id="petsList"></div>
+        <button class="add-pet-btn" onclick="openAddPet()">➕ Добавить питомца</button>
+      </div>
+
+      <!-- ИСТОРИЯ -->
+      <div class="cabinet-panel" id="cab-visits">
+        <div id="visitsList"></div>
+      </div>
+
+      <!-- ПРИВИВКИ -->
+      <div class="cabinet-panel" id="cab-vaccines">
+        <div id="vaccinesList"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== AUTH OVERLAY ===== -->
+<div class="auth-overlay" id="authOverlay" onclick="closeAuthOutside(event)">
+  <div class="auth-box">
+    <button class="auth-close" onclick="closeAuth()">✕</button>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" onclick="switchAuthTab('login',this)">Войти</button>
+      <button class="auth-tab" onclick="switchAuthTab('register',this)">Регистрация</button>
+    </div>
+
+    <!-- ВХОД -->
+    <div class="auth-panel active" id="authLogin">
+      <div class="auth-eyebrow">Личный кабинет</div>
+      <div class="auth-title">Добро пожаловать!</div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="loginEmail" placeholder="your@email.ru">
+      </div>
+      <div class="form-group">
+        <label>Пароль</label>
+        <input type="password" id="loginPassword" placeholder="Ваш пароль">
+      </div>
+      <button class="btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px;" onclick="doLogin()">Войти →</button>
+      <p style="text-align:center;margin-top:1rem;font-size:13px;color:var(--text-muted);">Нет аккаунта? <a href="#" onclick="switchAuthTab('register',null)" style="color:var(--forest);font-weight:700;">Зарегистрируйтесь</a></p>
+    </div>
+
+    <!-- РЕГИСТРАЦИЯ -->
+    <div class="auth-panel" id="authRegister">
+      <div class="auth-eyebrow">Новый аккаунт</div>
+      <div class="auth-title">Создать профиль</div>
+      <div class="form-group">
+        <label>Ваше имя</label>
+        <input type="text" id="regName" placeholder="Как вас зовут?">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="regEmail" placeholder="your@email.ru">
+      </div>
+      <div class="form-group">
+        <label>Пароль</label>
+        <input type="password" id="regPassword" placeholder="Минимум 6 символов">
+      </div>
+      <button class="btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px;" onclick="doRegister()">Зарегистрироваться →</button>
+      <p style="text-align:center;margin-top:1rem;font-size:13px;color:var(--text-muted);">Уже есть аккаунт? <a href="#" onclick="switchAuthTab('login',null)" style="color:var(--forest);font-weight:700;">Войти</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ADD PET OVERLAY -->
+<div class="auth-overlay" id="addPetOverlay" onclick="closeAddPetOutside(event)">
+  <div class="auth-box">
+    <button class="auth-close" onclick="closeAddPet()">✕</button>
+    <div class="auth-eyebrow">Мои питомцы</div>
+    <div class="auth-title">Добавить питомца</div>
+    <div class="form-group">
+      <label>Кличка</label>
+      <input type="text" id="petName" placeholder="Например: Рыжик">
+    </div>
+    <div class="form-group">
+      <label>Вид</label>
+      <select id="petType">
+        <option value="🐕">🐕 Собака</option>
+        <option value="🐈">🐈 Кошка</option>
+        <option value="🦜">🦜 Птица</option>
+        <option value="🐀">🐀 Грызун</option>
+        <option value="🦎">🦎 Рептилия</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Порода</label>
+      <input type="text" id="petBreed" placeholder="Например: Лабрадор">
+    </div>
+    <div class="form-group">
+      <label>Год рождения</label>
+      <input type="number" id="petYear" placeholder="2020" min="2000" max="2026">
+    </div>
+    <button class="btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px;" onclick="savePet()">Добавить →</button>
+  </div>
+</div>
+
 <!-- ===== APPOINTMENT MODAL ===== -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
   <div class="modal" id="modalBox">
@@ -1951,10 +2266,23 @@ footer .footer-bottom {
       </div>
       <div class="form-group">
         <label>Клиника</label>
-        <select id="f-clinic">
+        <select id="f-clinic" onchange="updateTimeSlots()">
           <option>Мачуги, 20 (круглосуточно)</option>
           <option>Уральская, 184/2 (09:00–21:00)</option>
         </select>
+      </div>
+      <div class="form-group">
+        <label>Дата приёма</label>
+        <input type="date" id="f-date" onchange="updateTimeSlots()" min="">
+      </div>
+      <div class="form-group">
+        <label>Время приёма</label>
+        <select id="f-time">
+          <option value="">Сначала выберите дату</option>
+        </select>
+        <div id="timeSlotBusy" style="display:none;margin-top:8px;padding:10px 14px;background:#FFF3E0;border-radius:10px;font-size:13px;color:#E65100;border:1px solid #FFCC80;">
+          ⚠️ <span id="timeSlotBusyText"></span>
+        </div>
       </div>
       <div class="form-group">
         <label>Комментарий (необязательно)</label>
@@ -2319,6 +2647,7 @@ function openModal() {
   document.getElementById('modalForm').style.display = 'block';
   document.getElementById('modalSuccess').style.display = 'none';
   document.body.style.overflow = 'hidden';
+  setTimeout(initDateField, 50);
 }
 function closeModal() {
   document.getElementById('modalOverlay').classList.remove('open');
@@ -2327,18 +2656,518 @@ function closeModal() {
 function closeModalOutside(e) {
   if (e.target === document.getElementById('modalOverlay')) closeModal();
 }
+// ========== РАСПИСАНИЕ И СЛОТЫ ==========
+var APPOINTMENTS_KEY = 'vet_appointments_v1';
+var SLOT_INTERVAL = 20; // минут — интервал между слотами
+var SLOT_CAPACITY = 2;  // максимум человек на один слот
+
+function getAppointments() {
+  try { return JSON.parse(localStorage.getItem(APPOINTMENTS_KEY) || '[]'); } catch(e) { return []; }
+}
+function saveAppointments(arr) {
+  try { localStorage.setItem(APPOINTMENTS_KEY, JSON.stringify(arr)); } catch(e) {}
+}
+
+// Возвращает минуты с начала дня для строки "HH:MM"
+function timeToMinutes(t) {
+  var p = t.split(':');
+  return parseInt(p[0]) * 60 + parseInt(p[1]);
+}
+function minutesToTime(m) {
+  var h = Math.floor(m / 60), mn = m % 60;
+  return (h < 10 ? '0' : '') + h + ':' + (mn < 10 ? '0' : '') + mn;
+}
+
+// Генерирует список слотов для выбранной клиники и даты
+function generateSlots(clinic, dateStr) {
+  var isRound = clinic.indexOf('Мачуги') !== -1; // круглосуточная
+  var startMin = isRound ? 0 : 9 * 60;           // 00:00 или 09:00
+  var endMin   = isRound ? 24 * 60 - SLOT_INTERVAL : 21 * 60; // до 23:40 или 21:00
+
+  var appointments = getAppointments();
+  var slots = [];
+  for (var m = startMin; m <= endMin; m += SLOT_INTERVAL) {
+    var timeStr = minutesToTime(m);
+    var count = appointments.filter(function(a) {
+      return a.date === dateStr && a.clinic === clinic && a.time === timeStr;
+    }).length;
+    slots.push({ time: timeStr, count: count, full: count >= SLOT_CAPACITY });
+  }
+  return slots;
+}
+
+function updateTimeSlots() {
+  var dateEl  = document.getElementById('f-date');
+  var timeEl  = document.getElementById('f-time');
+  var clinic  = document.getElementById('f-clinic').value;
+  var dateStr = dateEl ? dateEl.value : '';
+
+  // Устанавливаем минимальную дату — сегодня
+  if (dateEl && !dateEl.min) {
+    var today = new Date();
+    dateEl.min = today.toISOString().split('T')[0];
+  }
+
+  if (!dateStr) {
+    timeEl.innerHTML = '<option value="">Сначала выберите дату</option>';
+    return;
+  }
+
+  var slots = generateSlots(clinic, dateStr);
+  var freeSlots = slots.filter(function(s) { return !s.full; });
+
+  if (freeSlots.length === 0) {
+    timeEl.innerHTML = '<option value="">Нет свободного времени на эту дату</option>';
+    return;
+  }
+
+  timeEl.innerHTML = freeSlots.map(function(s) {
+    var label = s.time;
+    if (s.count === 1) label += ' (осталось 1 место)';
+    return '<option value="' + s.time + '">' + label + '</option>';
+  }).join('');
+
+  checkSelectedSlot();
+}
+
+function checkSelectedSlot() {
+  var busyDiv  = document.getElementById('timeSlotBusy');
+  var busyText = document.getElementById('timeSlotBusyText');
+  var timeEl   = document.getElementById('f-time');
+  var dateEl   = document.getElementById('f-date');
+  var clinic   = document.getElementById('f-clinic') ? document.getElementById('f-clinic').value : '';
+
+  if (!busyDiv || !timeEl || !timeEl.value) { if(busyDiv) busyDiv.style.display='none'; return; }
+
+  var dateStr = dateEl ? dateEl.value : '';
+  var appointments = getAppointments();
+  var selected = timeToMinutes(timeEl.value);
+
+  var count = appointments.filter(function(a) {
+    return a.date === dateStr && a.clinic === clinic && a.time === timeEl.value;
+  }).length;
+
+  if (count >= SLOT_CAPACITY) {
+    // Найти ближайший свободный
+    var slots = generateSlots(clinic, dateStr);
+    var free = slots.filter(function(s) { return !s.full; });
+    if (free.length > 0) {
+      busyText.textContent = 'Это время занято. Ближайшее свободное: ' + free[0].time;
+    } else {
+      busyText.textContent = 'На эту дату нет свободных мест.';
+    }
+    busyDiv.style.display = 'block';
+  } else {
+    busyDiv.style.display = 'none';
+  }
+}
+
+// Инициализация минимальной даты при открытии формы
+function initDateField() {
+  var dateEl = document.getElementById('f-date');
+  if (dateEl) {
+    var today = new Date();
+    dateEl.min = today.toISOString().split('T')[0];
+    if (!dateEl.value) dateEl.value = today.toISOString().split('T')[0];
+    updateTimeSlots();
+  }
+}
+
+var TG_BOT_TOKEN = '8563672960:AAFp7DJSrmwW2k9LyMHUKuOTzutqMfqb3sk';
+var TG_CHAT_ID   = ' 6131360796';
+// ▲▲▲ КАК ПОЛУЧИТЬ: создайте бота у @BotFather → скопируйте токен.
+//     Chat ID: добавьте бота в группу и напишите /start, затем откройте
+//     https://api.telegram.org/bot<ВАШ_ТОКЕН>/getUpdates — найдите "chat":{"id":...}
+// =====================================================
+
+function sendTelegramNotification(data) {
+  if (!TG_BOT_TOKEN || TG_BOT_TOKEN === 'ВСТАВИТЬ_ТОКЕН_БОТА') return; // токен не задан
+  var text =
+    '🐾 *Новая запись на приём!*\n' +
+    '———————————————\n' +
+    '👤 *Имя:* ' + data.name + '\n' +
+    '📞 *Телефон:* ' + data.phone + '\n' +
+    '🐶 *Животное:* ' + (data.animal || '—') + '\n' +
+    '🏥 *Услуга:* ' + (data.service || '—') + '\n' +
+    '📍 *Клиника:* ' + (data.clinic || '—') + '\n' +
+    (data.comment ? '💬 *Комментарий:* ' + data.comment + '\n' : '') +
+    '———————————————\n' +
+    '🕐 ' + new Date().toLocaleString('ru-RU');
+
+  fetch('https://api.telegram.org/bot' + TG_BOT_TOKEN + '/sendMessage', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: TG_CHAT_ID,
+      text: text,
+      parse_mode: 'Markdown'
+    })
+  }).catch(function() {}); // тихо игнорируем ошибку сети
+}
+
 function submitForm() {
-  var name = document.getElementById('f-name').value.trim();
-  var phone = document.getElementById('f-phone').value.trim();
+  var name    = document.getElementById('f-name').value.trim();
+  var phone   = document.getElementById('f-phone').value.trim();
+  var animal  = document.getElementById('f-animal').value;
+  var service = document.getElementById('f-service').value;
+  var clinic  = document.getElementById('f-clinic').value;
+  var dateStr = document.getElementById('f-date') ? document.getElementById('f-date').value : '';
+  var timeStr = document.getElementById('f-time') ? document.getElementById('f-time').value : '';
+  var comment = document.getElementById('f-comment').value.trim();
+
   if (!name || !phone) { showToast('Пожалуйста, заполните имя и телефон'); return; }
+  if (!dateStr) { showToast('Выберите дату приёма'); return; }
+  if (!timeStr) { showToast('Выберите время приёма'); return; }
+
+  // Проверяем что слот ещё свободен в момент отправки
+  var appointments = getAppointments();
+  var slotCount = appointments.filter(function(a) {
+    return a.date === dateStr && a.clinic === clinic && a.time === timeStr;
+  }).length;
+
+  if (slotCount >= SLOT_CAPACITY) {
+    var slots = generateSlots(clinic, dateStr);
+    var free = slots.filter(function(s) { return !s.full; });
+    var msg = free.length > 0
+      ? 'Это время уже занято! Ближайшее свободное: ' + free[0].time
+      : 'Это время занято, на эту дату мест нет.';
+    showToast('⏰ ' + msg);
+    updateTimeSlots();
+    return;
+  }
+
+  // Сохраняем запись
+  var days = ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'];
+  var dateObj = new Date(dateStr + 'T12:00:00');
+  var dayName = days[dateObj.getDay()];
+  appointments.push({ name: name, phone: phone, date: dateStr, time: timeStr, clinic: clinic });
+  saveAppointments(appointments);
+
+  sendTelegramNotification({ name: name, phone: phone, animal: animal, service: service, clinic: clinic, date: dateStr, dayName: dayName, time: timeStr, comment: comment });
+
+  // Обновляем текст успеха с деталями
+  var successEl = document.getElementById('modalSuccess');
+  successEl.innerHTML = '<div class=check>✅</div>' +
+    '<h3>Заявка отправлена!</h3>' +
+    '<p>Вы записаны на <strong>' + timeStr + '</strong>, ' + dayName + ' <strong>' + dateStr.split('-').reverse().join('.') + '</strong><br>' +
+    'Клиника: ' + clinic + '<br><br>' +
+    'Мы свяжемся с вами для подтверждения.<br><br>' +
+    'Экстренная помощь:<br><strong style="color:var(--forest);font-size:18px;">8-861-202-50-88</strong></p>';
+
   document.getElementById('modalForm').style.display = 'none';
-  document.getElementById('modalSuccess').style.display = 'block';
+  successEl.style.display = 'block';
+  updateTimeSlots();
 }
 function showToast(msg) {
   var t = document.getElementById('toast');
   t.textContent = msg; t.classList.add('show');
   setTimeout(function() { t.classList.remove('show'); }, 2800);
 }
+// ========== AUTH SYSTEM ==========
+var ADMIN_EMAIL = 'patimejkerdaun@gmail.com';
+var ADMIN_PASS = '839824';
+var USERS_KEY = 'vet_users_v1';
+var SESSION_KEY = 'vet_session_v1';
+
+function getUsers() { try { return JSON.parse(localStorage.getItem(USERS_KEY) || '{}'); } catch(e) { return {}; } }
+function saveUsers(u) { try { localStorage.setItem(USERS_KEY, JSON.stringify(u)); } catch(e) {} }
+function getSession() { try { return JSON.parse(localStorage.getItem(SESSION_KEY) || 'null'); } catch(e) { return null; } }
+function saveSession(s) { try { localStorage.setItem(SESSION_KEY, JSON.stringify(s)); } catch(e) {} }
+function isAdmin() { var s = getSession(); return s && s.email === ADMIN_EMAIL; }
+function isLoggedIn() { return !!getSession(); }
+
+function openAuth() { document.getElementById('authOverlay').classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeAuth() { document.getElementById('authOverlay').classList.remove('open'); document.body.style.overflow = ''; }
+function closeAuthOutside(e) { if (e.target === document.getElementById('authOverlay')) closeAuth(); }
+
+function switchAuthTab(tab, el) {
+  document.querySelectorAll('.auth-tab').forEach(function(t) { t.classList.remove('active'); });
+  document.querySelectorAll('.auth-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.getElementById('auth' + (tab === 'login' ? 'Login' : 'Register')).classList.add('active');
+  if (el) el.classList.add('active');
+  else {
+    var tabs = document.querySelectorAll('.auth-tab');
+    tabs[tab === 'login' ? 0 : 1].classList.add('active');
+  }
+}
+
+function doLogin() {
+  var email = (document.getElementById('loginEmail').value || '').trim().toLowerCase();
+  var pass = (document.getElementById('loginPassword').value || '').trim();
+  if (!email || !pass) { showToast('Заполните email и пароль'); return; }
+  // Проверка администратора
+  if (email === ADMIN_EMAIL && pass === ADMIN_PASS) {
+    saveSession({ email: ADMIN_EMAIL, name: 'Администратор', isAdmin: true });
+    onLogin(); closeAuth(); showToast('✅ Добро пожаловать, Администратор!'); return;
+  }
+  var users = getUsers();
+  if (!users[email]) { showToast('❌ Пользователь не найден'); return; }
+  if (users[email].password !== btoa(pass)) { showToast('❌ Неверный пароль'); return; }
+  saveSession({ email: email, name: users[email].name, isAdmin: false });
+  onLogin(); closeAuth();
+  showToast('✅ Добро пожаловать, ' + users[email].name + '!');
+}
+
+function doRegister() {
+  var name = (document.getElementById('regName').value || '').trim();
+  var email = (document.getElementById('regEmail').value || '').trim().toLowerCase();
+  var pass = (document.getElementById('regPassword').value || '').trim();
+  if (!name || !email || !pass) { showToast('Заполните все поля'); return; }
+  if (pass.length < 6) { showToast('Пароль минимум 6 символов'); return; }
+  if (!email.includes('@')) { showToast('Введите корректный email'); return; }
+  if (email === ADMIN_EMAIL) { showToast('❌ Этот email зарезервирован'); return; }
+  var users = getUsers();
+  if (users[email]) { showToast('❌ Пользователь уже существует'); return; }
+  users[email] = { name: name, password: btoa(pass), pets: [], visits: [], vaccines: [] };
+  saveUsers(users);
+  saveSession({ email: email, name: name, isAdmin: false });
+  onLogin(); closeAuth();
+  showToast('✅ Аккаунт создан! Добро пожаловать, ' + name + '!');
+}
+
+function logoutUser() {
+  localStorage.removeItem(SESSION_KEY);
+  onLogout(); showPage('home'); showToast('До свидания!');
+}
+
+function onLogin() {
+  var s = getSession();
+  document.getElementById('navAccountLabel').textContent = s.name.split(' ')[0];
+  updateDeleteBtnVisibility();
+  renderReviews(); renderReviewsHome();
+}
+
+function onLogout() {
+  document.getElementById('navAccountLabel').textContent = 'Войти';
+  updateDeleteBtnVisibility();
+  renderReviews(); renderReviewsHome();
+}
+
+function handleAccountClick() {
+  if (isLoggedIn()) { showCabinet(); } else { openAuth(); }
+}
+
+function showCabinet() {
+  var s = getSession();
+  if (!s) { openAuth(); return; }
+  document.getElementById('cabinetTitle').textContent = isAdmin() ? '⚙️ Панель администратора' : 'Мой кабинет';
+  document.getElementById('cabinetUserName').textContent = s.name;
+  document.getElementById('cabinetUserEmail').textContent = s.email;
+  document.getElementById('cabinetAvatar').textContent = isAdmin() ? '🔐' : '👤';
+  showPage('cabinet');
+  renderPets(); renderVisits(); renderVaccines();
+}
+
+function updateDeleteBtnVisibility() {
+  var admin = isAdmin();
+  document.querySelectorAll('.review-delete-btn').forEach(function(btn) {
+    btn.style.display = admin ? 'flex' : 'none';
+  });
+  document.querySelectorAll('.review-reply-btn, .review-reply-edit').forEach(function(btn) {
+    btn.style.display = admin ? '' : 'none';
+  });
+}
+
+// ========== PETS ==========
+function getUserData(key) {
+  var s = getSession(); if (!s || s.isAdmin) return [];
+  var users = getUsers(); var u = users[s.email];
+  return (u && u[key]) ? u[key] : [];
+}
+function setUserData(key, val) {
+  var s = getSession(); if (!s || s.isAdmin) return;
+  var users = getUsers();
+  if (!users[s.email]) return;
+  users[s.email][key] = val;
+  saveUsers(users);
+}
+
+function renderPets() {
+  var pets = getUserData('pets');
+  var el = document.getElementById('petsList');
+  if (!el) return;
+  if (!isLoggedIn()) { el.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:2rem;">Войдите, чтобы видеть питомцев</p>'; return; }
+  if (pets.length === 0) { el.innerHTML = '<p style="color:var(--text-muted);margin-bottom:1rem;">У вас пока нет добавленных питомцев.</p>'; return; }
+  el.innerHTML = pets.map(function(p, i) {
+    return '<div class="pet-card">' +
+      '<div class="pet-avatar">' + p.type + '</div>' +
+      '<div class="pet-info">' +
+        '<div class="pet-name">' + escHtml(p.name) + '</div>' +
+        '<div class="pet-meta">' + escHtml(p.breed || '') + (p.year ? ' · ' + (2026 - p.year) + ' лет' : '') + '</div>' +
+        '<div class="pet-tags"><span class="pet-tag">Добавлен: ' + p.added + '</span></div>' +
+      '</div>' +
+      '<button onclick="removePet(' + i + ')" style="background:none;border:none;cursor:pointer;font-size:18px;opacity:0.4;align-self:flex-start;" title="Удалить">🗑️</button>' +
+    '</div>';
+  }).join('');
+}
+
+function removePet(i) {
+  if (!confirm('Удалить питомца?')) return;
+  var pets = getUserData('pets'); pets.splice(i, 1); setUserData('pets', pets); renderPets();
+}
+
+function openAddPet() { document.getElementById('addPetOverlay').classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeAddPet() { document.getElementById('addPetOverlay').classList.remove('open'); document.body.style.overflow = ''; }
+function closeAddPetOutside(e) { if (e.target === document.getElementById('addPetOverlay')) closeAddPet(); }
+
+function savePet() {
+  var name = (document.getElementById('petName').value || '').trim();
+  var type = document.getElementById('petType').value;
+  var breed = (document.getElementById('petBreed').value || '').trim();
+  var year = parseInt(document.getElementById('petYear').value) || 0;
+  if (!name) { showToast('Введите кличку'); return; }
+  var pets = getUserData('pets');
+  pets.push({ name: name, type: type, breed: breed, year: year, added: formatDate() });
+  setUserData('pets', pets);
+  closeAddPet(); renderPets();
+  showToast('🐾 ' + name + ' добавлен(а)!');
+}
+
+function renderVisits() {
+  var visits = getUserData('visits');
+  var el = document.getElementById('visitsList');
+  if (!el) return;
+  if (visits.length === 0) {
+    el.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--text-muted);">' +
+      '<div style="font-size:48px;margin-bottom:1rem;">📋</div>' +
+      '<p>История визитов пока пуста.<br>После ваших посещений здесь появятся записи.</p></div>'; return;
+  }
+  el.innerHTML = visits.map(function(v) {
+    return '<div class="visit-row"><div class="visit-date">' + v.date + '</div>' +
+      '<div class="visit-details"><h4>' + escHtml(v.service) + '</h4><p>' + escHtml(v.doctor || '') + '</p></div></div>';
+  }).join('');
+}
+
+function renderVaccines() {
+  var vaccines = getUserData('vaccines');
+  var el = document.getElementById('vaccinesList');
+  if (!el) return;
+  if (vaccines.length === 0) {
+    el.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--text-muted);">' +
+      '<div style="font-size:48px;margin-bottom:1rem;">💉</div>' +
+      '<p>График прививок пуст.<br>Данные появятся после добавления ветеринаром.</p></div>'; return;
+  }
+  el.innerHTML = vaccines.map(function(v) {
+    return '<div class="vaccine-row"><div><div class="vaccine-name">' + escHtml(v.name) + '</div>' +
+      '<div class="vaccine-date">Следующая: ' + v.next + '</div></div>' +
+      '<span class="vaccine-status ' + v.status + '">' + (v.status === 'ok' ? '✅ OK' : v.status === 'soon' ? '⚠️ Скоро' : '🔴 Просрочено') + '</span></div>';
+  }).join('');
+}
+
+function showCabinetTab(tab, el) {
+  document.querySelectorAll('.cabinet-tab').forEach(function(t) { t.classList.remove('active'); });
+  document.querySelectorAll('.cabinet-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.getElementById('cab-' + tab).classList.add('active');
+  if (el) el.classList.add('active');
+}
+
+// ========== SYMPTOM CHECKER ==========
+var checkerAnimal = null;
+var checkerSymptoms = [];
+
+var SYMPTOMS = {
+  'Собака': ['Вялость / слабость','Отказ от еды','Рвота','Диарея','Кашель','Одышка','Судороги','Хромота','Кровь в моче','Понос с кровью','Резкое похудение','Зуд / расчёсы','Увеличение живота','Слезотечение','Чихание'],
+  'Кошка': ['Вялость / слабость','Отказ от еды','Рвота','Понос','Кашель','Одышка','Судороги','Кровь в моче','Затруднённое мочеиспускание','Резкое похудение','Зуд / облысение','Увеличение живота','Слезотечение','Чихание','Трудности при дыхании'],
+  'Птица': ['Взъерошенные перья','Отказ от еды','Вялость','Одышка','Выделения из носа','Понос','Судороги','Нарушение координации','Опухшие глаза'],
+  'Грызун': ['Вялость','Отказ от еды','Понос','Одышка','Судороги','Опухоли / шишки','Зуд','Облысение']
+};
+
+var URGENT = ['Одышка','Судороги','Понос с кровью','Кровь в моче','Затруднённое мочеиспускание','Трудности при дыхании','Увеличение живота'];
+var MEDIUM = ['Рвота','Диарея','Понос','Отказ от еды','Хромота','Резкое похудение'];
+
+function selectAnimal(animal, el) {
+  checkerAnimal = animal; checkerSymptoms = [];
+  document.querySelectorAll('.checker-animal-btn').forEach(function(b) { b.classList.remove('sel'); });
+  el.classList.add('sel');
+  var btn = document.getElementById('checkerBtn1');
+  btn.disabled = false; btn.style.opacity = '1';
+  // Обновим симптомы
+  var syms = SYMPTOMS[animal] || [];
+  document.getElementById('symptomGrid').innerHTML = syms.map(function(s) {
+    return '<span class="symptom-chip" onclick="toggleSymptom(this,\'' + s.replace(/'/g,"\\'") + '\')">' + s + '</span>';
+  }).join('');
+}
+
+function toggleSymptom(el, sym) {
+  el.classList.toggle('sel');
+  var idx = checkerSymptoms.indexOf(sym);
+  if (idx === -1) checkerSymptoms.push(sym); else checkerSymptoms.splice(idx, 1);
+  var btn = document.getElementById('checkerBtn2');
+  btn.disabled = checkerSymptoms.length === 0;
+  btn.style.opacity = checkerSymptoms.length > 0 ? '1' : '0.4';
+}
+
+function checkerNext(step) {
+  document.querySelectorAll('.checker-step').forEach(function(s) { s.classList.remove('active'); });
+  document.getElementById('checker-step-' + step).classList.add('active');
+  if (step === 3) { showCheckerResult(); }
+}
+
+function showCheckerResult() {
+  var urgentFound = checkerSymptoms.filter(function(s) { return URGENT.indexOf(s) !== -1; });
+  var mediumFound = checkerSymptoms.filter(function(s) { return MEDIUM.indexOf(s) !== -1; });
+  var level, title, text;
+  if (urgentFound.length > 0) {
+    level = 'urgent'; title = '🚨 Требуется срочная помощь!';
+    text = '<strong>' + checkerAnimal + '</strong> — выявлены критические симптомы: <strong>' + urgentFound.join(', ') + '</strong>.<br><br>Это может указывать на опасное для жизни состояние. Рекомендуем немедленно обратиться в клинику. Клиника на ул. Мачуги, 20 работает <strong>круглосуточно</strong>.';
+  } else if (mediumFound.length > 0 || checkerSymptoms.length >= 3) {
+    level = 'medium'; title = '⚠️ Рекомендуем визит к ветеринару';
+    text = 'Симптомы (' + checkerSymptoms.join(', ') + ') могут свидетельствовать о заболевании, требующем осмотра специалиста. Запишитесь на приём в ближайшие 1–2 дня для точной диагностики.';
+  } else {
+    level = 'low'; title = '✅ Состояние умеренное';
+    text = 'Указанные симптомы (' + checkerSymptoms.join(', ') + ') не требуют экстренного вмешательства. Понаблюдайте за питомцем 1–2 дня. Если симптомы усилятся — запишитесь на приём. При любом сомнении консультация ветеринара никогда не лишняя!';
+  }
+  document.getElementById('checkerResult').innerHTML =
+    '<div class="checker-result ' + level + '">' +
+      '<div class="checker-result-title">' + title + '</div>' +
+      '<p>' + text + '</p>' +
+    '</div>';
+}
+
+// ========== OVERRIDE renderReviewCard to hide delete for non-admin ==========
+// Re-patch renderReviewCard to control visibility
+var _origRenderReviewCard = renderReviewCard;
+renderReviewCard = function(r) {
+  var html = _origRenderReviewCard(r);
+  return html;
+};
+
+// After render, hide delete buttons for non-admin
+var _origRenderReviews = renderReviews;
+renderReviews = function() {
+  _origRenderReviews();
+  setTimeout(updateDeleteBtnVisibility, 20);
+};
+var _origRenderReviewsHome = renderReviewsHome;
+renderReviewsHome = function() {
+  _origRenderReviewsHome();
+  setTimeout(updateDeleteBtnVisibility, 20);
+};
+
+// ========== OVERRIDE deleteReview to require login as admin ==========
+deleteReview = function(id) {
+  if (!isAdmin()) { showToast('🔐 Только администратор может удалять отзывы'); return; }
+  if (!confirm('Удалить этот отзыв?')) return;
+  var reviews = getReviews().filter(function(r) { return r.id !== id; });
+  saveReviews(reviews);
+  renderReviews(); renderReviewsHome();
+  showToast('🗑️ Отзыв удалён');
+};
+
+openReply = function(id) {
+  if (!isAdmin()) { showToast('🔐 Только администратор может отвечать на отзывы'); return; }
+  _openReplyInner(id);
+};
+
+// ========== INIT ==========
+(function() {
+  var s = getSession();
+  if (s) {
+    document.getElementById('navAccountLabel').textContent = s.name.split(' ')[0];
+  }
+  updateDeleteBtnVisibility();
+})();
+
 var pageUrl = window.location.href;
 var shareText = 'Ветеринарная клиника «Друг» в Краснодаре — 15 лет заботы о питомцах!';
 function shareVK() { window.open('https://vk.com/share.php?url=' + encodeURIComponent(pageUrl) + '&title=' + encodeURIComponent(shareText), '_blank'); }
