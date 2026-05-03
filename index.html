@@ -1553,6 +1553,17 @@ footer .footer-bottom {
         <div class="hero-badge">⭐ 15 лет в Краснодаре</div>
         <h1>Забота о питомцах —<br><em>наше призвание</em></h1>
         <p class="hero-sub">Сеть ветеринарных клиник и аптек «Друг». Профессиональная команда, современное оборудование и тёплое отношение к каждому пациенту.</p>
+        <!-- ЭКСТРЕННЫЙ ТЕЛЕФОН -->
+        <div style="display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,rgba(26,58,107,0.08),rgba(58,114,196,0.12));border:1.5px solid var(--forest-pale);border-radius:14px;padding:12px 20px;margin-bottom:1.6rem;backdrop-filter:blur(8px);">
+          <div style="background:var(--forest);border-radius:50%;width:38px;height:38px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(26,58,107,0.3);">
+            <span style="font-size:18px;">📞</span>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1px;">Экстренная служба · 24/7</div>
+            <a href="tel:88612025088" style="font-family:'Unbounded',sans-serif;font-size:20px;font-weight:900;color:var(--forest);text-decoration:none;letter-spacing:-0.03em;display:block;line-height:1.1;">8-861-202-50-88</a>
+          </div>
+          <div style="width:8px;height:8px;background:#4ade80;border-radius:50%;box-shadow:0 0 8px #4ade80;animation:pulse 2s infinite;flex-shrink:0;"></div>
+        </div>
         <div class="hero-btns">
           <button class="btn-primary" onclick="openModal()">Записаться на приём</button>
           <button class="btn-outline" onclick="showPage('price')">Посмотреть прайс</button>
@@ -2245,14 +2256,74 @@ footer .footer-bottom {
 
   <section class="section">
     <div class="section-inner">
-      <div style="text-align:center;padding:80px 2rem;background:var(--forest-faint);border-radius:var(--radius);border:1px solid var(--forest-pale);">
-        <div style="font-size:64px;margin-bottom:1.5rem;">🔧</div>
-        <h3 style="font-family:'Unbounded',sans-serif;font-size:26px;font-weight:800;color:var(--text-dark);margin-bottom:0.8rem;letter-spacing:-0.02em;">Временно недоступно</h3>
-        <p style="font-size:16px;color:var(--text-soft);line-height:1.7;max-width:420px;margin:0 auto 2rem;">Раздел акций находится в разработке. Актуальные предложения уточняйте у администраторов клиники.</p>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-          <a href="tel:88612025088" class="btn-primary">📞 Позвонить</a>
-          <a href="https://wa.me/79180899812" class="btn-outline" style="text-decoration:none;">WhatsApp</a>
+      <div class="promos-grid">
+
+        <!-- АКЦИЯ: ВОПРОС ДРУГУ -->
+        <div class="promo-card" style="border:2px solid #0088cc;position:relative;overflow:hidden;">
+          <!-- Голубой акцент сверху -->
+          <div style="height:4px;background:linear-gradient(90deg,#0088cc,#54c5f8);width:100%;"></div>
+          <div class="promo-img" style="height:220px;">
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&q=85&auto=format&fit=crop" alt="Ветеринар с собакой" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,136,204,0.55) 100%);"></div>
+            <!-- Telegram иконка поверх фото -->
+            <div style="position:absolute;top:14px;left:14px;background:#0088cc;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,136,204,0.45);">
+              <svg width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.94 8.19l-2.03 9.56c-.15.66-.54.82-1.09.51l-3-2.21-1.45 1.4c-.16.16-.3.3-.61.3l.22-3.1 5.6-5.06c.24-.22-.06-.34-.38-.12L6.6 14.39 3.64 13.5c-.66-.2-.67-.66.14-.98l11.62-4.48c.55-.2 1.03.13.54 2.15z"/></svg>
+            </div>
+            <div class="promo-badge-overlay" style="background:linear-gradient(135deg,#0088cc,#54c5f8);font-size:13px;font-family:'Onest',sans-serif;font-weight:700;left:auto;right:14px;top:14px;">БЕСПЛАТНО</div>
+          </div>
+          <div class="promo-body">
+            <div class="promo-valid">🎁 Специальная акция · Постоянное предложение</div>
+            <h3 style="font-size:24px;">Задайте вопрос ветеринару бесплатно!</h3>
+            <p>Специалисты сети клиник и аптек «Друг» готовы абсолютно бесплатно и компетентно ответить на все ваши вопросы о здоровье питомца. Развейте сомнения и получите ясные рекомендации от профессионалов!</p>
+            <p style="font-size:13px;color:var(--text-muted);margin-bottom:1.2rem;">Не откладывайте заботу о здоровье вашего питомца — просто напишите нам в Telegram!</p>
+            <div style="background:var(--forest-faint);border-radius:var(--radius-sm);padding:1rem 1.2rem;margin-bottom:1.2rem;border:1px solid var(--forest-pale);display:flex;align-items:center;gap:12px;">
+              <div style="font-size:28px;flex-shrink:0;">📱</div>
+              <div>
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:2px;">Телефон для вопросов в Telegram</div>
+                <div style="font-size:20px;font-weight:800;color:var(--forest);letter-spacing:-0.01em;">+7 989 812-22-00</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="https://t.me/Drug_vet" target="_blank" rel="noopener" class="btn-primary" style="background:#0088cc;text-decoration:none;flex:1;justify-content:center;">
+                <svg width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.94 8.19l-2.03 9.56c-.15.66-.54.82-1.09.51l-3-2.21-1.45 1.4c-.16.16-.3.3-.61.3l.22-3.1 5.6-5.06c.24-.22-.06-.34-.38-.12L6.6 14.39 3.64 13.5c-.66-.2-.67-.66.14-.98l11.62-4.48c.55-.2 1.03.13.54 2.15z"/></svg>
+                Написать в Telegram
+              </a>
+              <a href="tel:+79898122200" class="btn-outline" style="text-decoration:none;flex:1;justify-content:center;">📞 Позвонить</a>
+            </div>
+          </div>
         </div>
+
+        <!-- АКЦИЯ: ДИСПАНСЕРИЗАЦИЯ −15% -->
+        <div class="promo-card">
+          <div class="promo-img">
+            <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=800&q=85&auto=format&fit=crop" alt="Диспансеризация" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
+            <div class="promo-badge-overlay">−15%</div>
+          </div>
+          <div class="promo-body">
+            <div class="promo-valid">🎁 При записи заранее</div>
+            <h3>Диспансеризация со скидкой −15%</h3>
+            <p>Комплексная проверка здоровья вашего питомца: осмотр терапевта, анализы крови, ЭХО сердца и УЗИ брюшной полости. Пакеты от 5 100 ₽.</p>
+            <button class="btn-primary" style="width:100%;justify-content:center;" onclick="showPage('price');setTimeout(()=>showPriceTab('dispcat',{target:document.querySelector('.price-tab:nth-child(2)')}),200)">Узнать подробнее →</button>
+          </div>
+        </div>
+
+        <!-- АКЦИЯ: НОЧНАЯ НАЦЕНКА -->
+        <div class="promo-card">
+          <div class="promo-img" style="background:linear-gradient(135deg,#1A3A6B,#0D1B33);display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;padding:1.5rem;">
+              <div style="font-size:64px;margin-bottom:0.5rem;">🌙</div>
+              <div style="font-family:'Unbounded',sans-serif;font-size:22px;font-weight:900;color:#fff;letter-spacing:-0.02em;">24 / 7 / 365</div>
+              <div style="color:rgba(255,255,255,0.6);font-size:13px;margin-top:4px;">Мачуги, 20</div>
+            </div>
+          </div>
+          <div class="promo-body">
+            <div class="promo-valid">⚡ Круглосуточный приём</div>
+            <h3>Экстренная помощь без выходных</h3>
+            <p>Клиника на ул. Мачуги, 20 принимает круглосуточно. Ночью (21:00–10:00) в приоритете экстренный приём тяжёлых пациентов. Ночная наценка +50%.</p>
+            <a href="tel:88612025088" class="btn-primary" style="width:100%;justify-content:center;text-decoration:none;">📞 8-861-202-50-88</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -2616,12 +2687,24 @@ footer .footer-bottom {
       <h2>Записаться на приём</h2>
       <p class="modal-sub">Заполните форму, и мы свяжемся с вами для подтверждения</p>
       <div class="form-group">
-        <label>Ваше имя</label>
+        <label>Ваше имя <span style="color:#dc2626;">*</span></label>
         <input type="text" id="f-name" placeholder="Как вас зовут?">
       </div>
       <div class="form-group">
-        <label>Телефон</label>
-        <input type="tel" id="f-phone" placeholder="+7 (___) ___-__-__" maxlength="18" inputmode="tel" autocomplete="tel">
+        <label>Телефон <span style="color:#dc2626;">*</span></label>
+        <div style="position:relative;">
+          <input type="tel" id="f-phone" placeholder="+7 (___) ___-__-__" maxlength="18" inputmode="tel" autocomplete="tel" style="padding-right:42px;" oninput="checkPhoneExists()">
+          <div id="phone-status" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:18px;display:none;"></div>
+        </div>
+        <div id="phone-hint" style="display:none;font-size:12px;margin-top:5px;padding:6px 10px;border-radius:6px;"></div>
+      </div>
+      <div class="form-group">
+        <label>Email <span style="color:var(--text-muted);font-weight:400;text-transform:none;letter-spacing:0;">(необязательно)</span></label>
+        <div style="position:relative;">
+          <input type="email" id="f-email" placeholder="your@email.ru" autocomplete="email" oninput="checkEmail()" style="padding-right:42px;">
+          <div id="email-status" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:18px;display:none;"></div>
+        </div>
+        <div id="email-hint" style="display:none;font-size:12px;margin-top:5px;padding:6px 10px;border-radius:6px;color:#dc2626;background:#fef2f2;border-radius:6px;"></div>
       </div>
       <div class="form-group">
         <label>Вид животного</label>
@@ -2661,25 +2744,63 @@ footer .footer-bottom {
         <input type="date" id="f-date" onchange="updateTimeSlots()" min="">
       </div>
       <div class="form-group">
-        <label>Время приёма</label>
-        <select id="f-time">
-          <option value="">Сначала выберите дату</option>
-        </select>
-        <div id="timeSlotBusy" style="display:none;margin-top:8px;padding:10px 14px;background:#FFF3E0;border-radius:10px;font-size:13px;color:#E65100;border:1px solid #FFCC80;">
-          ⚠️ <span id="timeSlotBusyText"></span>
-        </div>
-      </div>
-      <div class="form-group">
         <label>Комментарий (необязательно)</label>
         <textarea id="f-comment" placeholder="Опишите симптомы или уточните запрос..."></textarea>
       </div>
-      <button class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;" onclick="submitForm()">Отправить заявку</button>
-      <p style="font-size:12px;color:var(--text-muted);text-align:center;margin-top:0.8rem;">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+      <!-- СОГЛАСИЕ НА ОБРАБОТКУ ПД -->
+      <div id="consent-wrap" style="margin-bottom:1.4rem;border-radius:var(--radius-sm);border:1.5px solid var(--sand-mid);padding:14px 16px;background:var(--cream);transition:border-color 0.2s,background 0.2s;cursor:pointer;" onclick="toggleConsent()">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <!-- Кастомный чекбокс -->
+          <div id="consent-box" style="width:22px;height:22px;min-width:22px;border-radius:6px;border:2px solid var(--sand-mid);background:#fff;display:flex;align-items:center;justify-content:center;margin-top:1px;transition:all 0.2s;flex-shrink:0;">
+            <svg id="consent-check" width="13" height="13" viewBox="0 0 13 13" style="display:none;"><polyline points="2,7 5,10 11,3" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <input type="checkbox" id="f-consent" style="display:none;">
+          <span style="font-size:13px;color:var(--text-soft);line-height:1.65;font-weight:500;user-select:none;">Я даю согласие ИП Столовицкий Р.Ю. на обработку моих персональных данных (ФИО, адрес электронной почты, номер телефона) в целях записи на приём и обратной связи. Я проинформирован, что обработка осуществляется в соответствии с Федеральным законом №152-ФЗ «О персональных данных».</span>
+        </div>
+        <div id="consent-error" style="display:none;color:#dc2626;font-size:12px;font-weight:600;margin-top:8px;margin-left:34px;">⚠️ Необходимо дать согласие на обработку персональных данных</div>
+      </div>
+      <button class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;" onclick="submitForm()">Отправить заявку →</button>
+
+      <script>
+      function toggleConsent() {
+        var cb = document.getElementById('f-consent');
+        var box = document.getElementById('consent-box');
+        var check = document.getElementById('consent-check');
+        var wrap = document.getElementById('consent-wrap');
+        var err = document.getElementById('consent-error');
+        cb.checked = !cb.checked;
+        if (cb.checked) {
+          box.style.background = 'var(--forest)';
+          box.style.borderColor = 'var(--forest)';
+          check.style.display = 'block';
+          wrap.style.borderColor = 'var(--forest)';
+          wrap.style.background = 'var(--forest-faint)';
+          err.style.display = 'none';
+        } else {
+          box.style.background = '#fff';
+          box.style.borderColor = 'var(--sand-mid)';
+          check.style.display = 'none';
+          wrap.style.borderColor = 'var(--sand-mid)';
+          wrap.style.background = 'var(--cream)';
+        }
+      }
+      </script>
     </div>
     <div class="form-success" id="modalSuccess" style="display:none;">
       <div class="check">✅</div>
       <h3>Заявка отправлена!</h3>
-      <p>Мы свяжемся с вами в ближайшее время для подтверждения записи.<br><br>Экстренная помощь:<br><strong style="color:var(--forest);font-size:18px;">8-861-202-50-88</strong></p>
+      <p>Мы свяжемся с вами в ближайшее время.</p>
+      <div style="margin-top:1.5rem;background:var(--forest-faint);border-radius:var(--radius-sm);padding:1.2rem;border:1px solid var(--forest-pale);text-align:left;">
+        <div style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Если не перезвонили в течение часа:</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="tel:88612025088" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text-dark);font-weight:700;font-size:16px;">📞 8-861-202-50-88</a>
+          <a href="https://t.me/Drug_vet" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#0088cc;font-weight:700;font-size:15px;">
+            <svg width="20" height="20" fill="#0088cc" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.94 8.19l-2.03 9.56c-.15.66-.54.82-1.09.51l-3-2.21-1.45 1.4c-.16.16-.3.3-.61.3l.22-3.1 5.6-5.06c.24-.22-.06-.34-.38-.12L6.6 14.39 3.64 13.5c-.66-.2-.67-.66.14-.98l11.62-4.48c.55-.2 1.03.13.54 2.15z"/></svg>
+            Написать в Telegram @Drug_vet
+          </a>
+          <a href="https://wa.me/79180899812" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#25d366;font-weight:700;font-size:15px;">💬 WhatsApp</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -3162,82 +3283,333 @@ var TG_CHAT_ID   = '6131360796';
 // =====================================================
 
 function sendTelegramNotification(data) {
-  if (!TG_BOT_TOKEN || TG_BOT_TOKEN === 'ВСТАВИТЬ_ТОКЕН_БОТА') return; // токен не задан
+  if (!TG_BOT_TOKEN || TG_BOT_TOKEN === 'ВСТАВИТЬ_ТОКЕН_БОТА') return;
   var text =
     '🐾 *Новая запись на приём!*\n' +
     '———————————————\n' +
-    '👤 *Имя:* ' + data.name + '\n' +
+    '👤 *Имя:* ' + (data.name || 'не указано') + '\n' +
     '📞 *Телефон:* ' + data.phone + '\n' +
+    (data.email ? '📧 *Email:* ' + data.email + '\n' : '') +
     '🐶 *Животное:* ' + (data.animal || '—') + '\n' +
     '🏥 *Услуга:* ' + (data.service || '—') + '\n' +
     '📍 *Клиника:* ' + (data.clinic || '—') + '\n' +
+    '📅 *Дата:* ' + (data.date || '—') + (data.dayName ? ' (' + data.dayName + ')' : '') + '\n' +
     (data.comment ? '💬 *Комментарий:* ' + data.comment + '\n' : '') +
+    '✅ *Согласие на обработку ПД:* ' + (data.consent ? 'Дано ✔️' : 'Не дано ❌') + '\n' +
+    '🌐 *IP-адрес:* ' + (data.ip || 'неизвестен') + '\n' +
     '———————————————\n' +
-    '🕐 ' + new Date().toLocaleString('ru-RU');
+    '🕐 ' + (data.submittedAt || new Date().toLocaleString('ru-RU'));
 
+  // Попытка 1: sendMessage
   fetch('https://api.telegram.org/bot' + TG_BOT_TOKEN + '/sendMessage', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: TG_CHAT_ID,
-      text: text,
-      parse_mode: 'Markdown'
-    })
-  }).catch(function() {}); // тихо игнорируем ошибку сети
+    body: JSON.stringify({ chat_id: TG_CHAT_ID, text: text, parse_mode: 'Markdown' })
+  }).then(function(r) {
+    return r.json();
+  }).then(function(json) {
+    // Если бот не может доставить — пробуем через forwardMessage или логируем
+    if (!json.ok) {
+      console.warn('TG sendMessage failed:', json.description);
+      // Попытка 2: отправить без Markdown (на случай спецсимволов)
+      var plainText = text.replace(/\*/g, '').replace(/_/g, '');
+      fetch('https://api.telegram.org/bot' + TG_BOT_TOKEN + '/sendMessage', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: TG_CHAT_ID, text: plainText })
+      }).catch(function() {});
+    }
+  }).catch(function() {
+    // Сеть недоступна — сохраняем в очередь для повторной отправки
+    try {
+      var queue = JSON.parse(localStorage.getItem('tg_queue') || '[]');
+      queue.push({ data: data, ts: Date.now() });
+      localStorage.setItem('tg_queue', JSON.stringify(queue.slice(-10))); // макс 10
+    } catch(e) {}
+  });
+}
+
+// Повторная отправка отложенных уведомлений при следующем открытии страницы
+(function retryTgQueue() {
+  try {
+    var queue = JSON.parse(localStorage.getItem('tg_queue') || '[]');
+    if (!queue.length) return;
+    localStorage.removeItem('tg_queue');
+    queue.forEach(function(item) {
+      setTimeout(function() { sendTelegramNotification(item.data); }, 1000);
+    });
+  } catch(e) {}
+})();
+
+// ========== ПРОВЕРКА ТЕЛЕФОНА И EMAIL ==========
+function checkPhoneExists() {
+  var phone = (document.getElementById('f-phone').value || '').replace(/\D/g, '');
+  var status = document.getElementById('phone-status');
+  var hint   = document.getElementById('phone-hint');
+  // Нужно минимум 11 цифр (7 + 10)
+  if (phone.length < 11) {
+    status.style.display = 'none';
+    hint.style.display = 'none';
+    return;
+  }
+  // Ищем среди сохранённых заявок
+  var appointments = getAppointments();
+  var found = appointments.filter(function(a) {
+    return a.phone && a.phone.replace(/\D/g, '') === phone;
+  });
+  if (found.length > 0) {
+    var last = found[found.length - 1];
+    status.textContent = '⚠️';
+    status.style.display = 'block';
+    hint.style.display = 'block';
+    hint.style.background = '#fffbeb';
+    hint.style.color = '#92400e';
+    hint.style.border = '1px solid #fcd34d';
+    hint.style.borderRadius = '6px';
+    hint.style.padding = '6px 10px';
+    hint.textContent = '⚠️ Этот номер уже записан' + (last.date ? ' на ' + last.date : '') + '. Если хотите перезаписаться — мы свяжемся с вами.';
+  } else {
+    status.textContent = '✅';
+    status.style.display = 'block';
+    hint.style.display = 'none';
+  }
+}
+
+function checkEmail() {
+  var val = (document.getElementById('f-email').value || '').trim();
+  var status = document.getElementById('email-status');
+  var hint   = document.getElementById('email-hint');
+  if (!val) { status.style.display = 'none'; hint.style.display = 'none'; return; }
+  // Простая проверка формата
+  var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val);
+  if (ok) {
+    status.textContent = '✅';
+    status.style.display = 'block';
+    hint.style.display = 'none';
+  } else {
+    status.textContent = '❌';
+    status.style.display = 'block';
+    hint.textContent = 'Введите корректный email, например: name@mail.ru';
+    hint.style.display = 'block';
+  }
+}
+// ========== END ПРОВЕРКА ==========
+
+// ========== ИСТОРИЯ ЗАЯВОК (IP + аккаунт) ==========
+var HISTORY_KEY = 'vet_app_history_v1'; // глобальная история по IP
+
+function getAppHistory() {
+  try { return JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]'); } catch(e) { return []; }
+}
+function saveAppHistory(arr) {
+  try { localStorage.setItem(HISTORY_KEY, JSON.stringify(arr)); } catch(e) {} 
+}
+
+// Получаем IP через бесплатный API
+function getClientIP(callback) {
+  fetch('https://api.ipify.org?format=json')
+    .then(function(r){ return r.json(); })
+    .then(function(d){ callback(d.ip || 'неизвестен'); })
+    .catch(function(){ callback('неизвестен'); });
+}
+
+function saveToHistory(record) {
+  var history = getAppHistory();
+  history.unshift(record); // новые сверху
+  if (history.length > 50) history = history.slice(0, 50); // макс 50 записей
+  saveAppHistory(history);
+
+  // Если залогинен — сохраняем также в аккаунт
+  var s = getSession();
+  if (s && !s.isAdmin) {
+    var users = getUsers();
+    if (users[s.email]) {
+      if (!users[s.email].appHistory) users[s.email].appHistory = [];
+      users[s.email].appHistory.unshift(record);
+      if (users[s.email].appHistory.length > 30) users[s.email].appHistory = users[s.email].appHistory.slice(0, 30);
+      saveUsers(users);
+    }
+  }
+}
+
+function renderAppHistory() {
+  var el = document.getElementById('visitsList');
+  if (!el) return;
+
+  var s = getSession();
+  var admin = isAdmin();
+  var history = [];
+
+  // Администратор видит ВСЕ заявки из общей истории
+  if (admin) {
+    history = getAppHistory();
+  } else if (s && !s.isAdmin) {
+    // Залогиненный пользователь — история из аккаунта
+    var users = getUsers();
+    if (users[s.email] && users[s.email].appHistory) {
+      history = users[s.email].appHistory;
+    }
+  }
+
+  // Если нет аккаунта или история пустая — показываем из localStorage по IP (все)
+  if (!history.length) {
+    history = getAppHistory();
+  }
+
+  if (!history.length) {
+    el.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--text-muted);">' +
+      '<div style="font-size:48px;margin-bottom:1rem;">📋</div>' +
+      '<p>История заявок пока пуста.<br>После оформления записи она появится здесь.</p></div>';
+    return;
+  }
+
+  // Для администратора — показываем счётчик ожидающих заявок
+  var pendingCount = history.filter(function(v) { return (v.status || 'pending') === 'pending'; }).length;
+  var adminHeader = admin && pendingCount > 0
+    ? '<div style="margin-bottom:16px;padding:12px 18px;background:#fff7ed;border:1.5px solid #fb923c;border-radius:12px;font-size:14px;font-weight:700;color:#c2410c;">📋 Ожидают обработки: ' + pendingCount + ' заявок</div>'
+    : '';
+
+  el.innerHTML = adminHeader + '<div style="display:flex;flex-direction:column;gap:12px;">' +
+    history.map(function(v, i) {
+      var statusColor = { pending: '#f59e0b', confirmed: '#10b981', cancelled: '#ef4444', done: '#0077C8' };
+      var statusLabel = { pending: '⏳ Ожидает', confirmed: '✅ Подтверждена', cancelled: '❌ Отменена', done: '📞 Выполнено' };
+      var st = v.status || 'pending';
+      var isDone = st === 'done' || st === 'confirmed';
+
+      // Кнопка «Выполнить» — только для администратора и только если заявка ещё ожидает
+      var callBtn = '';
+      if (admin && !isDone) {
+        callBtn = '<div style="margin-top:12px;border-top:1px solid var(--sand);padding-top:12px;">' +
+          '<button onclick="markAppointmentDone(' + i + ')" style="' +
+            'background:#0077C8;color:#fff;border:none;border-radius:10px;' +
+            'padding:10px 20px;font-size:13px;font-weight:700;cursor:pointer;' +
+            'font-family:\'Onest\',sans-serif;display:inline-flex;align-items:center;gap:8px;' +
+            'transition:all 0.2s;' +
+          '" onmouseover="this.style.background=\'#005fa3\'" onmouseout="this.style.background=\'#0077C8\'">' +
+            '📞 Позвонили — выполнить' +
+          '</button>' +
+        '</div>';
+      }
+
+      return '<div style="background:var(--warm-white);border:1px solid ' + (st === 'pending' && admin ? '#fcd34d' : 'var(--sand)') + ';border-radius:var(--radius-sm);padding:1.2rem 1.4rem;box-shadow:var(--shadow-sm);">' +
+        '<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">' +
+          '<div>' +
+            '<div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Заявка #' + (i + 1) + ' · ' + (v.submittedAt || v.date || '—') + '</div>' +
+            '<div style="font-weight:700;color:var(--text-dark);font-size:15px;">' + escHtml(v.name || 'Без имени') + '</div>' +
+            '<div style="font-size:13px;color:var(--text-soft);margin-top:2px;">📞 ' + escHtml(v.phone || '—') + (v.email ? ' · 📧 ' + escHtml(v.email) : '') + '</div>' +
+          '</div>' +
+          '<span style="font-size:12px;font-weight:700;padding:4px 12px;border-radius:50px;background:' + (statusColor[st] || '#f59e0b') + '22;color:' + (statusColor[st] || '#f59e0b') + ';">' + (statusLabel[st] || '⏳ Ожидает') + '</span>' +
+        '</div>' +
+        '<div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;">' +
+          (v.animal ? '<span style="font-size:12px;padding:3px 10px;border-radius:50px;background:var(--forest-faint);color:var(--forest);font-weight:600;">' + escHtml(v.animal) + '</span>' : '') +
+          (v.service ? '<span style="font-size:12px;padding:3px 10px;border-radius:50px;background:var(--amber-pale);color:var(--forest);font-weight:600;">' + escHtml(v.service) + '</span>' : '') +
+          (v.clinic ? '<span style="font-size:12px;padding:3px 10px;border-radius:50px;background:var(--sand);color:var(--text-mid);font-weight:600;">📍 ' + escHtml(v.clinic) + '</span>' : '') +
+          (v.date ? '<span style="font-size:12px;padding:3px 10px;border-radius:50px;background:var(--sand);color:var(--text-mid);font-weight:600;">📅 ' + escHtml(v.date) + '</span>' : '') +
+        '</div>' +
+        (v.ip ? '<div style="margin-top:6px;font-size:11px;color:var(--text-muted);">🌐 IP: ' + escHtml(v.ip) + '</div>' : '') +
+        callBtn +
+      '</div>';
+    }).join('') +
+  '</div>';
+}
+
+// ========== ПОМЕТИТЬ ЗАЯВКУ КАК ВЫПОЛНЕННУЮ (после звонка) ==========
+function markAppointmentDone(index) {
+  if (!isAdmin()) { showToast('🔐 Только администратор'); return; }
+  var history = getAppHistory();
+  if (!history[index]) return;
+
+  var v = history[index];
+  v.status = 'done';
+  v.doneAt = new Date().toLocaleDateString('ru-RU') + ' ' + new Date().toLocaleTimeString('ru-RU', {hour:'2-digit',minute:'2-digit'});
+  history[index] = v;
+  saveAppHistory(history);
+
+  // Уведомление в Telegram
+  if (TG_BOT_TOKEN && TG_BOT_TOKEN !== 'ВСТАВИТЬ_ТОКЕН_БОТА') {
+    var text =
+      '✅ *Заявка выполнена после звонка*\n' +
+      '———————————————\n' +
+      '👤 *Имя:* ' + (v.name || '—') + '\n' +
+      '📞 *Телефон:* ' + (v.phone || '—') + '\n' +
+      '🐶 *Животное:* ' + (v.animal || '—') + '\n' +
+      '🏥 *Услуга:* ' + (v.service || '—') + '\n' +
+      '📍 *Клиника:* ' + (v.clinic || '—') + '\n' +
+      '📅 *Дата записи:* ' + (v.date || '—') + '\n' +
+      '🕐 *Выполнено:* ' + v.doneAt;
+    fetch('https://api.telegram.org/bot' + TG_BOT_TOKEN + '/sendMessage', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: TG_CHAT_ID, text: text, parse_mode: 'Markdown' })
+    }).catch(function(){});
+  }
+
+  renderAppHistory();
+  showToast('✅ Заявка отмечена как выполненная!');
 }
 
 function submitForm() {
-  var name    = document.getElementById('f-name').value.trim();
+  var name    = (document.getElementById('f-name').value || '').trim();
   var phone   = document.getElementById('f-phone').value.trim();
+  var email   = (document.getElementById('f-email').value || '').trim();
   var animal  = document.getElementById('f-animal').value;
   var service = document.getElementById('f-service').value;
   var clinic  = document.getElementById('f-clinic').value;
   var dateStr = document.getElementById('f-date') ? document.getElementById('f-date').value : '';
-  var timeStr = document.getElementById('f-time') ? document.getElementById('f-time').value : '';
   var comment = document.getElementById('f-comment').value.trim();
+  var consent = document.getElementById('f-consent');
 
-  if (!name || !phone) { showToast('Пожалуйста, заполните имя и телефон'); return; }
+  if (!name) {
+    showToast('Пожалуйста, введите ваше имя');
+    document.getElementById('f-name').focus();
+    return;
+  }
+  if (!phone || phone.replace(/\D/g,'').length < 11) {
+    showToast('Пожалуйста, введите номер телефона');
+    document.getElementById('f-phone').focus();
+    return;
+  }
   if (!dateStr) { showToast('Выберите дату приёма'); return; }
-  if (!timeStr) { showToast('Выберите время приёма'); return; }
-
-  // Проверяем что слот ещё свободен в момент отправки
-  var appointments = getAppointments();
-  var slotCount = appointments.filter(function(a) {
-    return a.date === dateStr && a.clinic === clinic && a.time === timeStr;
-  }).length;
-
-  if (slotCount >= SLOT_CAPACITY) {
-    var slots = generateSlots(clinic, dateStr);
-    var free = slots.filter(function(s) { return !s.full; });
-    var msg = free.length > 0
-      ? 'Это время уже занято! Ближайшее свободное: ' + free[0].time
-      : 'Это время занято, на эту дату мест нет.';
-    showToast('⏰ ' + msg);
-    updateTimeSlots();
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+    showToast('Проверьте формат email');
+    document.getElementById('f-email').focus();
+    return;
+  }
+  if (!consent || !consent.checked) {
+    var wrap = document.getElementById('consent-wrap');
+    var err  = document.getElementById('consent-error');
+    if (wrap) { wrap.style.borderColor = '#dc2626'; wrap.style.background = '#fef2f2'; }
+    if (err)  { err.style.display = 'block'; }
+    wrap && wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
   }
 
-  // Сохраняем запись
+  // Сохраняем в appointments (для проверки дублей)
   var days = ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'];
   var dateObj = new Date(dateStr + 'T12:00:00');
   var dayName = days[dateObj.getDay()];
-  appointments.push({ name: name, phone: phone, date: dateStr, time: timeStr, clinic: clinic });
+  var appointments = getAppointments();
+  appointments.push({ name: name, phone: phone, email: email, date: dateStr, time: '', clinic: clinic });
   saveAppointments(appointments);
 
-  sendTelegramNotification({ name: name, phone: phone, animal: animal, service: service, clinic: clinic, date: dateStr, dayName: dayName, time: timeStr, comment: comment });
-
-  // Обновляем текст успеха с деталями
-  var successEl = document.getElementById('modalSuccess');
-  successEl.innerHTML = '<div class=check>✅</div>' +
-    '<h3>Заявка отправлена!</h3>' +
-    '<p>Вы записаны на <strong>' + timeStr + '</strong>, ' + dayName + ' <strong>' + dateStr.split('-').reverse().join('.') + '</strong><br>' +
-    'Клиника: ' + clinic + '<br><br>' +
-    'Мы свяжемся с вами для подтверждения.<br><br>' +
-    'Экстренная помощь:<br><strong style="color:var(--forest);font-size:18px;">8-861-202-50-88</strong></p>';
-
+  // Скрываем форму, показываем успех сразу
   document.getElementById('modalForm').style.display = 'none';
-  successEl.style.display = 'block';
-  updateTimeSlots();
+  document.getElementById('modalSuccess').style.display = 'block';
+
+  // Получаем IP и сохраняем историю + шлём в TG
+  getClientIP(function(ip) {
+    var now = new Date();
+    var submittedAt = now.toLocaleDateString('ru-RU') + ' ' + now.toLocaleTimeString('ru-RU', {hour:'2-digit',minute:'2-digit'});
+    var record = {
+      name: name, phone: phone, email: email,
+      animal: animal, service: service, clinic: clinic,
+      date: dateStr, dayName: dayName, comment: comment,
+      ip: ip, submittedAt: submittedAt, status: 'pending',
+      consent: true
+    };
+    saveToHistory(record);
+    sendTelegramNotification(record);
+  });
 }
 function showToast(msg) {
   var t = document.getElementById('toast');
@@ -3405,18 +3777,7 @@ function savePet() {
 }
 
 function renderVisits() {
-  var visits = getUserData('visits');
-  var el = document.getElementById('visitsList');
-  if (!el) return;
-  if (visits.length === 0) {
-    el.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--text-muted);">' +
-      '<div style="font-size:48px;margin-bottom:1rem;">📋</div>' +
-      '<p>История визитов пока пуста.<br>После ваших посещений здесь появятся записи.</p></div>'; return;
-  }
-  el.innerHTML = visits.map(function(v) {
-    return '<div class="visit-row"><div class="visit-date">' + v.date + '</div>' +
-      '<div class="visit-details"><h4>' + escHtml(v.service) + '</h4><p>' + escHtml(v.doctor || '') + '</p></div></div>';
-  }).join('');
+  renderAppHistory();
 }
 
 function renderVaccines() {
@@ -3688,29 +4049,37 @@ function copyLink() {
 
     var triggered = false;
 
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting && !triggered) {
-          triggered = true;
-          // stagger each counter slightly
-          els.forEach(function(el, i) {
-            setTimeout(function() { animateCounter(el); }, i * 120);
-          });
-          observer.disconnect();
-        }
+    function runAll() {
+      if (triggered) return;
+      triggered = true;
+      els.forEach(function(el, i) {
+        setTimeout(function() { animateCounter(el); }, i * 120);
       });
-    }, { threshold: 0.4 });
+      if (obs) obs.disconnect();
+    }
 
-    observer.observe(els[0]);
+    // На мобиле threshold 0.1 — достаточно чтобы 10% было видно
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) runAll();
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    obs.observe(els[0]);
+
+    // Страховка: если через 3 сек всё ещё не запустилось — запускаем принудительно
+    setTimeout(runAll, 3000);
   }
 
-  // Wait for loader to hide, then init
+  // Ждём лоадер — но с запасным вариантом через DOMContentLoaded
   var loaderEl = document.getElementById('loader-overlay');
   if (loaderEl) {
     loaderEl.addEventListener('transitionend', function handler() {
       loaderEl.removeEventListener('transitionend', handler);
       initCounters();
     });
+    // Запасной вариант если transitionend не сработал (iOS)
+    setTimeout(initCounters, 2500);
   } else {
     window.addEventListener('DOMContentLoaded', initCounters);
   }
