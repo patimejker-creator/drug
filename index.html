@@ -2944,9 +2944,6 @@ function saveReviews(r) {
   var toSave = r.filter(function(rv) { return rv.id < 9000000000; });
   try { localStorage.setItem(REVIEWS_KEY, JSON.stringify(toSave)); } catch(e) {}
 }
-function saveReviews(r) {
-  try { localStorage.setItem(REVIEWS_KEY, JSON.stringify(r)); } catch(e) {}
-}
 function renderStars(n) {
   var s = '';
   for (var i = 0; i < 5; i++) s += i < n ? '★' : '☆';
